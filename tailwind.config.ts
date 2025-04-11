@@ -64,6 +64,7 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				zakes: {
+					// Updated to match logo colors more precisely
 					red: '#ea384c',
 					black: '#000000',
 					darkgray: '#222222',
