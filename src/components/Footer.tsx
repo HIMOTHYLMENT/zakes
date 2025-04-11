@@ -9,8 +9,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Column 1: Logo and About */}
           <div>
-            <Link to="/" className="text-white font-display text-3xl">
-              ZAKES
+            <Link to="/" className="inline-block mb-4">
+              <img 
+                src="/lovable-uploads/e8d69b3c-12b2-48b7-92dd-7a17abdc3b88.png" 
+                alt="Zakes Mobile Kitchen Logo" 
+                className="h-16 w-auto"
+              />
             </Link>
             <p className="mt-4 text-gray-400">
               Serving the most delicious street food kotas in town. Made with love

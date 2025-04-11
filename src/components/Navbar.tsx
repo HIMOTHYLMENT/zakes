@@ -45,8 +45,12 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="text-white font-display text-2xl">
-            ZAKES
+          <Link to="/" className="flex items-center">
+            <img 
+              src="/lovable-uploads/e8d69b3c-12b2-48b7-92dd-7a17abdc3b88.png" 
+              alt="Zakes Mobile Kitchen Logo" 
+              className="h-14 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}

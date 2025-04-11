@@ -7,6 +7,7 @@ export interface MenuItemProps {
   description: string;
   price: number;
   image: string;
+  category?: string; // Added category property as optional
 }
 
 const MenuCard = ({ item }: { item: MenuItemProps }) => {
