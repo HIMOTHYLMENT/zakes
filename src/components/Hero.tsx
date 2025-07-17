@@ -1,17 +1,41 @@
 
 import { Link } from "react-router-dom";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "@/components/ui/carousel";
+
+const heroImages = [
+  "/lovable-uploads/03760056-dbc9-4257-85c4-e9a97536871c.png",
+  "/lovable-uploads/321daa51-f53e-4394-a469-b037dc62e049.png",
+  "/lovable-uploads/03760056-dbc9-4257-85c4-e9a97536871c.png",
+  "/lovable-uploads/321daa51-f53e-4394-a469-b037dc62e049.png",
+];
 
 const Hero = () => {
   return (
     <div className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
+      {/* Carousel Background Images */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="/lovable-uploads/03760056-dbc9-4257-85c4-e9a97536871c.png"
-          alt="Zakes Signature Kota"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80"></div>
+        <Carousel className="h-full w-full">
+          <CarouselContent className="h-full w-full">
+            {heroImages.map((src, idx) => (
+              <CarouselItem key={idx} className="h-full w-full">
+                <img
+                  src={src}
+                  alt={`Zakes Hero Slide ${idx + 1}`}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80"></div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="z-10" />
+          <CarouselNext className="z-10" />
+        </Carousel>
       </div>
 
       {/* Content */}

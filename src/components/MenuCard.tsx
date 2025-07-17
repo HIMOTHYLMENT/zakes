@@ -28,12 +28,12 @@ const MenuCard = ({ item }: { item: MenuItemProps }) => {
           }`}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-        <div className="absolute bottom-4 right-4 bg-zakes-red text-white px-3 py-1 rounded-full font-bold">
+        <div className="absolute bottom-4 right-4 bg-zakes-red text-white px-3 py-1 rounded-full font-normal">
           R{item.price.toFixed(2)}
         </div>
       </div>
       <div className="p-6">
-        <h3 className="text-xl font-bold mb-2">{item.name}</h3>
+        <h3 className="text-xl font-normal mb-2">{item.name}</h3>
         <p className="text-gray-400 mb-4">{item.description}</p>
         <button className="w-full bg-zakes-red hover:bg-opacity-90 text-white py-2 rounded-md font-semibold transition-colors">
           Add to Order
