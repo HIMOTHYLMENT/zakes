@@ -1,5 +1,6 @@
 
 import { useState } from 'react';
+import { useCart } from "@/context/CartContext";
 
 export interface MenuItemProps {
   id: number;
@@ -12,6 +13,7 @@ export interface MenuItemProps {
 
 const MenuCard = ({ item }: { item: MenuItemProps }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const { addToCart } = useCart();
 
   return (
     <div
@@ -35,7 +37,10 @@ const MenuCard = ({ item }: { item: MenuItemProps }) => {
       <div className="p-6">
         <h3 className="text-xl font-normal mb-2">{item.name}</h3>
         <p className="text-gray-400 mb-4">{item.description}</p>
-        <button className="w-full bg-zakes-red hover:bg-opacity-90 text-white py-2 rounded-md font-semibold transition-colors">
+        <button
+          className="w-full bg-zakes-red hover:bg-opacity-90 text-white py-2 rounded-md font-semibold transition-colors"
+          onClick={() => addToCart({ id: item.id, name: item.name, price: item.price, image: item.image })}
+        >
           Add to Order
         </button>
       </div>
